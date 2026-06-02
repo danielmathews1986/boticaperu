@@ -1,0 +1,76 @@
+{
+    "categories": [
+      {
+        "id": 1,
+        "name": "Dermocosmética",
+        "products": [
+          { "id": 101, "name": "Toallitas Húmedas Huggies Limpieza Cotidiana - Bolsa 80 UN", "price": 59.90 },
+          { "id": 102, "name": "Toallitas Húmedas Huggies Limpieza Cotidiana - Bolsa 80 UN", "price": 89.90 },
+          { "id": 103, "name": "Eucerin Anti Pigment", "price": 119.90 },
+          { "id": 104, "name": "Bioderma Sensibio", "price": 74.90 },
+          { "id": 105, "name": "ISDIN Acniben", "price": 69.90 },
+          { "id": 106, "name": "ISDIN Acniben", "price": 69.90 },
+          { "id": 107, "name": "ISDIN Acniben", "price": 69.90 },
+          { "id": 108, "name": "ISDIN Acniben", "price": 69.90 }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "Farmacia",
+        "products": [
+          { "id": 201, "name": "Paracetamol 500mg", "price": 5.90 },
+          { "id": 202, "name": "Ibuprofeno 400mg", "price": 8.90 },
+          { "id": 203, "name": "Loratadina", "price": 12.90 },
+          { "id": 204, "name": "Omeprazol", "price": 9.90 }
+        ]
+      },
+      {
+        "id": 3,
+        "name": "Bienestar",
+        "products": [
+          { "id": 301, "name": "Vitamina C", "price": 25.90 },
+          { "id": 302, "name": "Omega 3", "price": 45.90 },
+          { "id": 303, "name": "Magnesio", "price": 35.90 }
+        ]
+      },
+      {
+        "id": 4,
+        "name": "Infantil",
+        "products": [
+          { "id": 401, "name": "Pañales Pampers", "price": 45.90 },
+          { "id": 402, "name": "Pediasure", "price": 69.90 }
+        ]
+      },
+      {
+        "id": 5,
+        "name": "Fotoprotección",
+        "products": [
+          { "id": 501, "name": "ISDIN Fusion Water", "price": 89.90 }
+        ]
+      },
+      {
+        "id": 6,
+        "name": "Inkaclub",
+        "products": [
+          { "id": 601, "name": "Pack Inkaclub 1", "price": 29.90 },
+          { "id": 602, "name": "Pack Inkaclub 2", "price": 39.90 },
+          { "id": 603, "name": "Pack Inkaclub 3", "price": 49.90 }
+        ]
+      },
+      {
+        "id": 7,
+        "name": "tienda-24-hrs",
+        "products": [
+          { "id": 701, "name": "Agua San Luis", "price": 2.50 },
+          { "id": 702, "name": "Gatorade", "price": 5.50 }
+        ]
+      },
+      {
+        "id": 8,
+        "name": "Catalogo",
+        "products": [
+          { "id": 801, "name": "Producto Catálogo 1", "price": 10.00 }
+        ]
+      }
+    ]
+  }

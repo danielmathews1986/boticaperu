@@ -1,0 +1,72 @@
+<div class="w-full">
+    <div class="text-center bg-gray-100 rounded-tl-2xl rounded-tr-2xl">
+        <img src="/products/product01.svg" alt="product01" class="inline max-w-[248px] h-auto>">
+    </div>
+    <div class="p-4 min-h-[325px] bg-white rounded-b-2xl">
+        <h1 class="text-[#7E8BA7] text-[10px] font-semibold uppercase leading-[24px] tracking-[0.02em]">
+            BOLSA 80 UN</h1>
+        <h2 class="font-normal mt-1 text-[#354159] text-[14px] leading-5 tracking-normal">
+            <a [routerLink]="[ '/', categorySlug,  product.id ]"
+            class="hover:text-blue-600">
+            {{ product.name }}
+          </a>
+        </h2>
+
+        <div class="flex items-center mt-4 gap-2 rounded-2xl bg-[#EAF7FE] max-w-[144px] pl-2 pr-2">
+            <span>
+                <img src="/products/icon-interesar.svg" alt="icon-interesar"
+                    class="inline max-w-[20px] h-auto>">
+            </span>
+            <span class="font-semibold text-[11px]  leading-6 align-middle text-[#1A8FF1]">Te puede
+                interesar</span>
+        </div>
+
+        <div class="flex items-center mt-4 gap-2 bg-[#F5F5F5] rounded-2xl max-w-[94px] pl-2 pr-2">
+            <span>
+                <img src="/products/icon-inkafarma.svg" alt="icon-inkafarma"
+                    class="inline max-w-[20px] h-auto>">
+            </span>
+            <span class="font-semibold text-[11px] leading-6 align-middle text-[#7E8BA7]">Inkafarma</span>
+        </div>
+
+
+        <div class="flex items-center mt-4 gap-2">
+            <p class="font-normal text-[13px] leading-[13px] text-[#7E8BA7]">price-1</p>
+        </div>
+
+        <div class="flex items-center gap-6">
+            <p class="font-normal text-[13px] leading-[13px] text-[#354159] right-11">price-2</p>
+            <span>
+                <img src="/products/5.svg" alt="icon-inkafarma" class="inline max-w-[32px] h-auto>">
+            </span>
+        </div>
+
+
+        <div class="flex items-center gap-6">
+
+            <p class="text-[13px] leading-[13px] text-[#354159] font-semibold">price-3</p>
+            <div>
+                <span>
+                    <img src="/products/sip.svg" alt="icon-inkafarma" class="inline max-w-[20px] h-auto>">
+                </span>
+                <span>
+                    <img src="/products/20.svg" alt="icon-inkafarma" class="inline max-w-[32px] h-auto>">
+                </span>
+            </div>
+
+        </div>
+
+        <div class="flex items-center mt-4 gap-2">
+            <button
+                class="w-[221.5px] h-12 rounded-full flex items-center justify-center gap-[6px] px-6 bg-[#17A15B] text-white font-semibold">
+                Agregar al carrito
+            </button>
+
+            <span class="w-12 h-12 rounded-full border bg-[#EDF8F2] flex items-center justify-center">
+                <img src="/products/heart.png" alt="icon-inkafarma" class="inline max-w-[20px] h-auto>">
+            </span>
+
+
+        </div>
+    </div>
+</div>

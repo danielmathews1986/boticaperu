@@ -1,0 +1,150 @@
+@if(product) {
+
+<div class="grid grid-cols-1 lg:grid-cols-[826px_428px] gap-4 justify-center p-6 bg-white rounded-2xl mt-4">
+    <div class="grid grid-cols-1 lg:grid-cols-[91px_minmax(0,1fr)] gap-4">
+        <div class="flex flex-row min-[992px]:flex-col gap-4">
+            @for(image of images; track image.id) {
+            <img [src]="image.thumb" 
+                alt="miniatura" 
+                (click)="selectImage(image)"
+                class="w-20 h-20 cursor-pointer rounded border-2 p-1"
+                [class.border-[#1A8FF1]]="selectedImage.id === image.id"
+                [class.border-[#FFFFFF]]="selectedImage.id !== image.id">
+            }
+        </div>
+        <div>
+            <img [src]="selectedImage.full" alt="producto" class="w-full max-w-[520px]">
+        </div>
+    </div>
+    <div>
+        <div class="p-4 min-h-[325px] gap-4">
+
+            <div class="flex justify-between">
+                <h1 class="font-semibold text-[13px] leading-[18px] text-[#7E8BA7]">SOBRE 1 UN</h1>
+                <h2 class="font-normal text-[14px] leading-5 text-[#7E8BA7]">SKU 123456</h2>
+            </div>
+            <h2 class="mt-2 font-semibold  text-[#354159] text-[14px] leading-5 tracking-normal">
+                {{ product.name }}
+            </h2>
+
+            <div class="flex items-center gap-2 mt-2 justify-between font-normal text-[13px] text-[#354159]">
+                <p>Precio regular</p>
+                <p class="font-normal text-[13px] leading-[13px] text-[#7E8BA7] line-through">price-1</p>
+            </div>
+
+            <div class="flex items-center gap-2 justify-between font-normal text-[13px] text-[#354159]">
+                <p>Precio promocional</p>
+                <div class="max-w-[108px] text-right gap-2 flex items-center">
+                    <span class="font-normal text-[13px] leading-[13px] text-[#354159]">price-2</span>
+                    <span>
+                        <img src="/products/5.svg" alt="icon-inkafarma" class="inline max-w-[32px] h-auto>">
+                    </span>
+                </div>
+            </div>
+
+
+            <div class="flex items-center gap-2 justify-between font-normal text-[13px] text-[#354159]">
+                <p>Exclusivo con tarjeta</p>
+                <div class="max-w-[122px] text-right flex gap-2 items-center">
+                    <span>
+                        <img src="/products/sip.svg" alt="icon-inkafarma" class="inline max-w-[20px] h-auto>">
+                    </span>
+                    <span class="text-[13px] leading-[13px] text-[#354159] font-semibold">price-3</span>
+                    <span>
+                        <img src="/products/20.svg" alt="icon-inkafarma" class="inline max-w-[32px] h-auto>">
+                    </span>
+                </div>
+            </div>
+
+            <ul class="list-disc pl-5 mt-6">
+                @for (item of (expanded ? items : items.slice(0, 2)); track $index) {
+                <li class="leading-2  font-normal text-[13px] tracking-[0.1px] text-[#7E8BA7]">
+                    {{ item }}
+                </li>
+                }
+            </ul>
+
+            @if (items.length > 2) {
+            <button type="button" (click)="toggleExpanded()" class="mt-2 text-[#1A8FF1] font-semibold text-[12px]">
+                {{ expanded ? 'Ver menos' : 'Ver más' }}
+            </button>
+            }
+
+            <div class="mt-6">
+                <span class="text-[#354159] text-[14px] font-semibold ">Presentación: </span><span
+                    class="mt-6 text-[14px] font-thin"> Sobre</span>
+            </div>
+
+            <div class="border rounded-2xl mt-6 mb-6">
+                <div class="flex items-center justify-between w-full p-4">
+                    <img src="/products/icon-big3.svg" alt="icon-interesar" class="w-12 h-12">
+                    <div class="flex-1 ml-4">
+                        <p class="font-sans text-[14px] text-[#354159]">Sobre</p>
+
+                        <p class="font-thin text-[14px] text-[#7E8BA7]">Desde price-1</p>
+                    </div>
+                    <div>
+                        <input type="radio" name="presentation" value="sobre" [(ngModel)]="selectedPresentation"
+                            class="w-5 h-5 cursor-pointer" />
+                    </div>
+                </div>
+
+                <hr class="border-0 border-t border-gray-200" />
+
+                <div class="flex items-center justify-between w-full p-4">
+                    <img src="/products/icon-big3.svg" alt="icon-interesar" class="w-12 h-12">
+                    <div class="flex-1 ml-4">
+                        <p class="font-sans text-[14px] text-[#354159]">Caja</p>
+                        <p class="font-thin text-[14px] text-[#7E8BA7]">Desde price-2</p>
+                    </div>
+                    <div>
+                        <input type="radio" class="w-5 h-5 cursor-pointer" name="presentation" value="caja"
+                            [(ngModel)]="selectedPresentation" />
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="flex items-center gap-2">
+                <button
+                    class="w-full h-12 rounded-full flex items-center justify-center gap-[6px] px-6 bg-[#17A15B] text-white font-semibold">
+                    Agregar al carrito
+                </button>
+
+                <span class="w-12 h-12 rounded-full border bg-[#EDF8F2] flex items-center justify-center">
+                    <img src="/products/heart.png" alt="icon-inkafarma" class="inline max-w-[20px] h-auto>">
+                </span>
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+}
+
+
+<app-accordion [items]="accordionItems">
+</app-accordion>
+
+<div class="mt-6 mb-6 flex gap-4 items-center justify-between">
+    <div>
+        <span class="text-[#354159] text-[16px] font-semibold">Lo más buscado </span>
+        <span class="text-[#1A8FF1] font-semibold text-[12px]"><a href="">Mostrar más</a></span>
+    </div>
+
+    <div class="flex gap-3">
+
+        <button (click)="productSwiper.prev()" class="w-8 h-8 flex items-center justify-center rounded-md border bg-[#E4E8F0] text-[#98A4BF]"> ‹ </button>
+        <button (click)="productSwiper.next()" class="w-8 h-8 flex items-center justify-center rounded-md border bg-[#17A15B] text-[#FFFFFF]"> › </button>
+    </div>
+
+</div>
+
+
+<app-swiper #productSwiper [slides]="products">
+    <ng-template let-product>
+        <app-card [product]="product"></app-card>
+    </ng-template>
+</app-swiper>

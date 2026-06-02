@@ -1,0 +1,30 @@
+<div class="w-full rounded-lg bg-white mt-4">
+
+    @for (item of items; track $index) {
+  
+      <div class="border-b last:border-b-0">
+  
+        <button
+          type="button"
+          class="w-full px-4 py-4 flex justify-between items-center text-left"
+          (click)="toggleAccordion($index)">
+
+          <span class="font-semibold text-[16px] text-[#38163d]">
+            {{ item.title }}
+          </span>
+  
+          <span>
+            {{ openItem === $index ? '⌄' : '›'  }}
+          </span>
+        </button>
+  
+        @if (openItem === $index) {
+          <div class="px-4 pb-4">
+            <p class="font-normal text-[13px] text-[#7E8BA7]">
+              {{ item.content }}
+            </p>
+          </div>
+        }
+      </div>
+    }
+  </div>

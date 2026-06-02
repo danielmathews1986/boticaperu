@@ -1,0 +1,29 @@
+<div #swiperContainer class="swiper">
+
+    <div class="swiper-wrapper">
+
+        @for(slide of slides; track $index) {
+
+        <div class="swiper-slide">
+
+            <ng-container *ngTemplateOutlet="
+                slideTemplate;
+                context: {
+                    $implicit: slide
+                }
+                ">
+            </ng-container>
+
+        </div>
+
+        }
+
+    </div>
+
+    <div class="swiper-pagination"></div>
+
+    <div class="swiper-button-next"></div>
+
+    <div class="swiper-button-prev"></div>
+
+</div>

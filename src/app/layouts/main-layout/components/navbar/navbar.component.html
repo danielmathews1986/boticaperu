@@ -1,0 +1,18 @@
+<nav class="border-t py-4">
+  <ul class="flex flex-wrap gap-4 lg:gap-10 font-medium mx-4 lg:mx-12">
+
+    @for(item of menuItems; track item.route) {
+
+      <li>
+        <a
+          [routerLink]="item.route"
+          class="text-[13px] font-normal text-[#354159]">
+
+          {{ item.label }}
+
+        </a>
+      </li>
+
+    }
+
+  </ul>
