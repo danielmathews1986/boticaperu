@@ -1,76 +1,92 @@
 {
-    "categories": [
-      {
-        "id": 1,
-        "name": "Dermocosmética",
-        "products": [
-          { "id": 101, "name": "Toallitas Húmedas Huggies Limpieza Cotidiana - Bolsa 80 UN", "price": 59.90 },
-          { "id": 102, "name": "Toallitas Húmedas Huggies Limpieza Cotidiana - Bolsa 80 UN", "price": 89.90 },
-          { "id": 103, "name": "Eucerin Anti Pigment", "price": 119.90 },
-          { "id": 104, "name": "Bioderma Sensibio", "price": 74.90 },
-          { "id": 105, "name": "ISDIN Acniben", "price": 69.90 },
-          { "id": 106, "name": "ISDIN Acniben", "price": 69.90 },
-          { "id": 107, "name": "ISDIN Acniben", "price": 69.90 },
-          { "id": 108, "name": "ISDIN Acniben", "price": 69.90 }
-        ]
-      },
-      {
-        "id": 2,
-        "name": "Farmacia",
-        "products": [
-          { "id": 201, "name": "Paracetamol 500mg", "price": 5.90 },
-          { "id": 202, "name": "Ibuprofeno 400mg", "price": 8.90 },
-          { "id": 203, "name": "Loratadina", "price": 12.90 },
-          { "id": 204, "name": "Omeprazol", "price": 9.90 }
-        ]
-      },
-      {
-        "id": 3,
-        "name": "Bienestar",
-        "products": [
-          { "id": 301, "name": "Vitamina C", "price": 25.90 },
-          { "id": 302, "name": "Omega 3", "price": 45.90 },
-          { "id": 303, "name": "Magnesio", "price": 35.90 }
-        ]
-      },
-      {
-        "id": 4,
-        "name": "Infantil",
-        "products": [
-          { "id": 401, "name": "Pañales Pampers", "price": 45.90 },
-          { "id": 402, "name": "Pediasure", "price": 69.90 }
-        ]
-      },
-      {
-        "id": 5,
-        "name": "Fotoprotección",
-        "products": [
-          { "id": 501, "name": "ISDIN Fusion Water", "price": 89.90 }
-        ]
-      },
-      {
-        "id": 6,
-        "name": "Inkaclub",
-        "products": [
-          { "id": 601, "name": "Pack Inkaclub 1", "price": 29.90 },
-          { "id": 602, "name": "Pack Inkaclub 2", "price": 39.90 },
-          { "id": 603, "name": "Pack Inkaclub 3", "price": 49.90 }
-        ]
-      },
-      {
-        "id": 7,
-        "name": "tienda-24-hrs",
-        "products": [
-          { "id": 701, "name": "Agua San Luis", "price": 2.50 },
-          { "id": 702, "name": "Gatorade", "price": 5.50 }
-        ]
-      },
-      {
-        "id": 8,
-        "name": "Catalogo",
-        "products": [
-          { "id": 801, "name": "Producto Catálogo 1", "price": 10.00 }
-        ]
-      }
-    ]
-  }
+  "categories": [
+    {
+      "id": 1,
+      "name": "Dermocosmética",
+      "products": [
+        { "id": 101, "name": "La Roche-Posay Effaclar Gel Limpiador 200ml", "price": 79.90 },
+        { "id": 102, "name": "Eucerin Anti-Pigment Dual Serum 30ml", "price": 189.90 },
+        { "id": 103, "name": "Bioderma Sensibio H2O 250ml", "price": 74.90 },
+        { "id": 104, "name": "ISDIN Acniben Gel Limpiador 150ml", "price": 69.90 },
+        { "id": 105, "name": "Cetaphil Loción Hidratante 473ml", "price": 89.90 }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Farmacia",
+      "products": [
+        { "id": 201, "name": "Paracetamol 500mg Caja x 100 Tabletas", "price": 5.90 },
+        { "id": 202, "name": "Ibuprofeno 400mg Caja x 20 Tabletas", "price": 8.90 },
+        { "id": 203, "name": "Loratadina 10mg Caja x 10 Tabletas", "price": 12.90 },
+        { "id": 204, "name": "Omeprazol 20mg Caja x 14 Cápsulas", "price": 9.90 },
+        { "id": 205, "name": "Amoxicilina 500mg Caja x 12 Cápsulas", "price": 19.90 }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Bienestar",
+      "products": [
+        { "id": 301, "name": "Vitamina C 1000mg x 60 Tabletas", "price": 25.90 },
+        { "id": 302, "name": "Omega 3 1000mg x 100 Cápsulas", "price": 45.90 },
+        { "id": 303, "name": "Magnesio x 60 Cápsulas", "price": 35.90 },
+        { "id": 304, "name": "Colágeno Hidrolizado x 300g", "price": 59.90 },
+        { "id": 305, "name": "Multivitamínico Centrum Adulto x 30 Tabletas", "price": 39.90 }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Infantil",
+      "products": [
+        { "id": 401, "name": "Pañales Pampers Confort Sec Talla G x 48", "price": 45.90 },
+        { "id": 402, "name": "Pediasure Vainilla 400g", "price": 69.90 },
+        { "id": 403, "name": "Toallitas Húmedas Huggies x 80 Unidades", "price": 14.90 },
+        { "id": 404, "name": "Nestum Trigo y Miel 270g", "price": 12.90 },
+        { "id": 405, "name": "Johnson's Baby Shampoo 400ml", "price": 19.90 }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Fotoprotección",
+      "products": [
+        { "id": 501, "name": "ISDIN Fusion Water SPF 50+ 50ml", "price": 89.90 },
+        { "id": 502, "name": "La Roche-Posay Anthelios UVMune 400 SPF50+", "price": 109.90 },
+        { "id": 503, "name": "Eucerin Sun Oil Control SPF50+ 50ml", "price": 99.90 },
+        { "id": 504, "name": "Heliocare 360 Gel Oil-Free SPF50+", "price": 119.90 },
+        { "id": 505, "name": "Bioderma Photoderm Max SPF50+", "price": 84.90 }
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Inkaclub",
+      "products": [
+        { "id": 601, "name": "Pack Bienvenida Inkaclub", "price": 29.90 },
+        { "id": 602, "name": "Pack Cuidado Facial Inkaclub", "price": 39.90 },
+        { "id": 603, "name": "Pack Vitaminas Inkaclub", "price": 49.90 },
+        { "id": 604, "name": "Pack Protección Solar Inkaclub", "price": 59.90 },
+        { "id": 605, "name": "Pack Familiar Inkaclub", "price": 79.90 }
+      ]
+    },
+    {
+      "id": 7,
+      "name": "tienda-24-hrs",
+      "products": [
+        { "id": 701, "name": "Agua San Luis 625ml", "price": 2.50 },
+        { "id": 702, "name": "Gatorade Cool Blue 500ml", "price": 5.50 },
+        { "id": 703, "name": "Red Bull Energy Drink 250ml", "price": 8.90 },
+        { "id": 704, "name": "Chocolate Sublime 30g", "price": 2.00 },
+        { "id": 705, "name": "Papas Lays Clásicas 40g", "price": 3.50 }
+      ]
+    },
+    {
+      "id": 8,
+      "name": "Catalogo",
+      "products": [
+        { "id": 801, "name": "Alcohol Medicinal 70° 500ml", "price": 10.00 },
+        { "id": 802, "name": "Algodón Hidrófilo 100g", "price": 6.90 },
+        { "id": 803, "name": "Agua Oxigenada 120ml", "price": 4.90 },
+        { "id": 804, "name": "Curitas Adhesivas x 20 Unidades", "price": 7.90 },
+        { "id": 805, "name": "Termómetro Digital", "price": 24.90 }
+      ]
+    }
+  ]
+}

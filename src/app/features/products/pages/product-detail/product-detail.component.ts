@@ -8,6 +8,7 @@ import { AccordionItem } from '../../../../interfaces/accordion.interfaces';
 import { AccordionComponent } from '../../../../shared/accordion/accordion.component';
 import { CardComponent } from '../../components/card.component';
 import { SeoService } from '../../../../services/seo.service';
+import { AnalyticsService } from '../../../../services/analytics.service';
 
 @Component({
   selector: 'app-product-detail',
@@ -22,8 +23,8 @@ export class ProductDetailComponent {
   private route = inject(ActivatedRoute);
   private productService = inject(ProductService);
   private seo = inject(SeoService);
+  private analytics = inject(AnalyticsService);
   
-
   product: any;
 
   items: string[] = [
@@ -35,42 +36,15 @@ export class ProductDetailComponent {
   ];
 
   products = [
-    {
-      name: 'Toallitas Húmedas Huggies Limpieza Cotidiana - Bolsa 80 UN',
-      description: '500mg',
-      image: '/products/p1.jpg',
-      price: 5.90
-    },
-    {
-      name: 'Toallitas Húmedas Huggies Limpieza Cotidiana - Bolsa 80 UN',
-      description: '400mg',
-      image: '/products/p2.jpg',
-      price: 8.90
-    },
-    {
-      name: 'Toallitas Húmedas Huggies Limpieza Cotidiana - Bolsa 80 UN',
-      description: '500mg',
-      image: '/products/p1.jpg',
-      price: 5.90
-    },
-    {
-      name: 'Toallitas Húmedas Huggies Limpieza Cotidiana - Bolsa 80 UN',
-      description: '500mg',
-      image: '/products/p1.jpg',
-      price: 5.90
-    },
-    {
-      name: 'Paracetamol',
-      description: '500mg',
-      image: '/products/p1.jpg',
-      price: 5.90
-    },
-    {
-      name: 'Paracetamol',
-      description: '500mg',
-      image: '/products/p1.jpg',
-      price: 5.90
-    },
+    { "id": 101, "name": "La Roche-Posay Effaclar Gel Limpiador 200ml", "price": 79.90 },
+    { "id": 302, "name": "Omega 3 1000mg x 100 Cápsulas", "price": 45.90 },
+    { "id": 202, "name": "Ibuprofeno 400mg Caja x 20 Tabletas", "price": 8.90 },
+    { "id": 402, "name": "Pediasure Vainilla 400g", "price": 69.90 },
+    { "id": 404, "name": "Nestum Trigo y Miel 270g", "price": 12.90 },
+    { "id": 405, "name": "Johnson's Baby Shampoo 400ml", "price": 19.90 },
+    { "id": 104, "name": "ISDIN Acniben Gel Limpiador 150ml", "price": 69.90 },
+    { "id": 105, "name": "Cetaphil Loción Hidratante 473ml", "price": 89.90 },
+    { "id": 303, "name": "Magnesio x 60 Cápsulas", "price": 35.90 },
   ];
 
   accordionItems: AccordionItem[] = [
@@ -128,6 +102,10 @@ export class ProductDetailComponent {
             ...product,
             categoryName: category.name
           };
+
+          this.analytics.viewItem(
+            this.product
+          );
   
           // 👉 AQUÍ YA EXISTE EL PRODUCTO
           this.seo.setSeo({
