@@ -1,5 +1,6 @@
-import { Component, Input } from '@angular/core';
+import { Component, inject, Input } from '@angular/core';
 import { RouterLink } from '@angular/router';
+import { CartService } from '../services/cart.service';
   
   @Component({
     selector: 'app-card',
@@ -8,6 +9,8 @@ import { RouterLink } from '@angular/router';
     templateUrl: './card.component.html'
   })
   export class CardComponent {
+
+    private cartService =inject(CartService);
 
     categorySlug = '';
   
@@ -21,4 +24,7 @@ import { RouterLink } from '@angular/router';
       price: number;
     };
   
+    addToCart(): void {
+      this.cartService.add(1);
+    }
   }

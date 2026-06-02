@@ -4,11 +4,13 @@ import {
   Component,
   ContentChild,
   ElementRef,
+  inject,
   Input,
+  PLATFORM_ID,
   TemplateRef,
   ViewChild
 } from '@angular/core';
-
+import { isPlatformBrowser } from '@angular/common';
 import Swiper from 'swiper';
 import { Navigation, Pagination } from 'swiper/modules';
 
@@ -20,6 +22,7 @@ import { Navigation, Pagination } from 'swiper/modules';
 })
 export class SwiperComponent implements AfterViewInit {
 
+  private platformId = inject( PLATFORM_ID );
   @ViewChild('swiperContainer') swiperContainer!: ElementRef;
   @ContentChild(TemplateRef) slideTemplate!: TemplateRef<any>;
   @Input() slides: any[] = [];
@@ -28,6 +31,10 @@ export class SwiperComponent implements AfterViewInit {
 
   ngAfterViewInit(): void {
 
+    if (!isPlatformBrowser(this.platformId)) {
+      return;
+    }
+    
     this.swiper =  new Swiper(
       this.swiperContainer.nativeElement,
       {

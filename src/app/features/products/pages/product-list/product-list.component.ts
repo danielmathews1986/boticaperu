@@ -2,6 +2,7 @@ import { Component, inject } from '@angular/core';
 import { ActivatedRoute, RouterLink } from '@angular/router';
 
 import { ProductService } from '../../services/product.service';
+import { CartService } from '../../services/cart.service';
 // import { BreadcrumbService } from '../../services/breadcrumb.service';
 
 @Component({
@@ -15,6 +16,8 @@ export class ProductListComponent {
   private route = inject(ActivatedRoute);
   //private breadcrumbService = inject(BreadcrumbService);
   private productService = inject(ProductService);
+   private cartService =inject(CartService);
+  
 
   categoryName = '';
   products: any[] = [];
@@ -55,6 +58,10 @@ export class ProductListComponent {
       .replace(/[\u0300-\u036f]/g, '')
       .toLowerCase()
       .replace(/\s+/g, '-');
+  }
+
+  addToCart(): void {
+    this.cartService.add(1);
   }
 
 }

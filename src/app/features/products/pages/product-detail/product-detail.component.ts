@@ -9,6 +9,7 @@ import { AccordionComponent } from '../../../../shared/accordion/accordion.compo
 import { CardComponent } from '../../components/card.component';
 import { SeoService } from '../../../../services/seo.service';
 import { AnalyticsService } from '../../../../services/analytics.service';
+import { CartService } from '../../services/cart.service';
 
 @Component({
   selector: 'app-product-detail',
@@ -24,6 +25,7 @@ export class ProductDetailComponent {
   private productService = inject(ProductService);
   private seo = inject(SeoService);
   private analytics = inject(AnalyticsService);
+  private cartService =inject(CartService);
   
   product: any;
 
@@ -125,6 +127,10 @@ export class ProductDetailComponent {
   
   toggleExpanded(): void {
     this.expanded = !this.expanded;
+  }
+
+  addToCart(): void {
+    this.cartService.add(1);
   }
 
 }

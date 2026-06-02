@@ -8,6 +8,11 @@ export const routes: Routes = [
     children: [
       {
         path: '',
+        redirectTo: 'farmacia',
+        pathMatch: 'full'
+      },
+      {
+        path: '',
         loadChildren: () =>
           import('./features/products/pages/routes/products.routes'),
       },
