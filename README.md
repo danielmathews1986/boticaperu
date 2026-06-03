@@ -1,3 +1,14 @@
+
+# Flujo
+
+Se esta mostrando un listado de cards en primer instante cuando carga la aplicacion, el cual se tiene que hacer un click al titulo de producto que se encuentra en el card para ingresar al detalle de este donde podras visualizar los elementos requeridos.
+
+# Instalador 
+ 
+npm install
+ng serve
+
+
 # EcommerceBp
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.10.
